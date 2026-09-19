@@ -1,0 +1,466 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Form Pendaftaran 🌸</title>
+    <style>
+        body * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+/* BACKGROUND */
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+
+    background: linear-gradient(
+        135deg,
+        #ffd6e7,
+        #e3d7ff,
+        #d7f4ff
+    );
+}
+
+
+/* KARTU FORM */
+.form-card {
+    width: 100%;
+    max-width: 550px;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 30px;
+
+    box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.15);
+
+    border: 4px solid #fff0f7;
+
+    position: relative;
+}
+
+
+/* EMOJI ATAS */
+.emoji {
+    text-align: center;
+
+    font-size: 55px;
+
+    margin-bottom: 5px;
+}
+
+
+/* JUDUL */
+h1 {
+    text-align: center;
+
+    color: #d94f8a;
+
+    margin-bottom: 8px;
+
+    font-size: 30px;
+}
+
+
+/* TEKS PEMBUKA */
+.welcome {
+    text-align: center;
+
+    color: #888;
+
+    font-size: 14px;
+
+    margin-bottom: 25px;
+}
+
+
+/* GROUP */
+.form-group {
+    margin-bottom: 20px;
+}
+
+
+/* LABEL */
+.form-group > label {
+    display: block;
+
+    font-weight: bold;
+
+    color: #555;
+
+    margin-bottom: 8px;
+}
+
+
+/* INPUT TEXT, PASSWORD, TEXTAREA, SELECT */
+input[type="text"],
+input[type="password"],
+textarea,
+select {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border: 2px solid #f0d4e2;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    font-size: 14px;
+
+    background-color: #fffafd;
+
+    transition: 0.3s;
+}
+
+
+/* SAAT INPUT DIKLIK */
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+
+    border-color: #d94f8a;
+
+    background-color: white;
+
+    box-shadow: 0 0 10px rgba(217, 79, 138, 0.15);
+}
+
+
+/* TEXTAREA */
+textarea {
+    resize: vertical;
+}
+
+
+/* RADIO */
+.option-box {
+    display: flex;
+
+    gap: 25px;
+
+    padding: 12px;
+
+    background-color: #fff4f8;
+
+    border-radius: 12px;
+}
+
+
+.option-box label {
+    color: #666;
+
+    cursor: pointer;
+}
+
+
+/* CHECKBOX */
+.hobi-box {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+    padding: 12px;
+
+    background-color: #f8f3ff;
+
+    border-radius: 12px;
+}
+
+
+.hobi-box label {
+    color: #666;
+
+    cursor: pointer;
+}
+
+
+/* WARNA RADIO DAN CHECKBOX */
+input[type="radio"],
+input[type="checkbox"] {
+
+    accent-color: #d94f8a;
+
+    margin-right: 5px;
+
+    cursor: pointer;
+}
+
+
+/* SELECT */
+select {
+    cursor: pointer;
+}
+
+
+/* BUTTON */
+button {
+
+    width: 100%;
+
+    padding: 14px;
+
+    margin-top: 5px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background: linear-gradient(
+        135deg,
+        #ff75a8,
+        #a875ff
+    );
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+/* EFEK TOMBOL */
+button:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 18px rgba(168, 117, 255, 0.3);
+}
+
+
+/* TEKS BAWAH */
+.footer {
+
+    text-align: center;
+
+    color: #aaa;
+
+    font-size: 12px;
+
+    margin-top: 20px;
+}
+
+
+/* RESPONSIVE HP */
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .form-card {
+        padding: 25px;
+    }
+
+    .option-box {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .hobi-box {
+        grid-template-columns: 1fr;
+    }
+
+}
+    </style>
+
+    <!-- Menghubungkan CSS -->
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="form-card">
+
+            <!-- Judul -->
+            <div class="emoji"></div>
+
+            <h1>Form Pendaftaran</h1>
+
+            <p class="welcome">
+                Haii!  Yuk isi data kamu di bawah ini~
+            </p>
+
+            <form action="berhasil.html" method="get">
+
+                <!-- TEXT -->
+                <div class="form-group">
+                    <label> Nama Lengkap</label>
+
+                    <input 
+                        type="text"
+                        name="nama"
+                        placeholder="Contoh: Aisyah Hafizah"
+                        required>
+                </div>
+
+
+                <!-- PASSWORD -->
+                <div class="form-group">
+                    <label> Password</label>
+
+                    <input 
+                        type="password"
+                        name="password"
+                        placeholder="Masukkan password"
+                        required>
+                </div>
+
+
+                <!-- TEXT AREA -->
+                <div class="form-group">
+                    <label> Alamat</label>
+
+                    <textarea 
+                        name="alamat"
+                        placeholder="Tulis alamat kamu di sini..."
+                        rows="4"></textarea>
+                </div>
+
+
+                <!-- RADIO BUTTON -->
+                <div class="form-group">
+
+                    <label> Jenis Kelamin</label>
+
+                    <div class="option-box">
+
+                        <label>
+                            <input 
+                                type="radio"
+                                name="gender"
+                                value="Laki-laki">
+                             Laki-laki
+                        </label>
+
+                        <label>
+                            <input 
+                                type="radio"
+                                name="gender"
+                                value="Perempuan">
+                             Perempuan
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CHECKBOX -->
+                <div class="form-group">
+
+                    <label> Hobi</label>
+
+                    <div class="hobi-box">
+
+                        <label>
+                            <input 
+                                type="checkbox"
+                                name="hobi"
+                                value="Membaca">
+                             Membaca
+                        </label>
+
+                        <label>
+                            <input 
+                                type="checkbox"
+                                name="hobi"
+                                value="Gaming">
+                             Gaming
+                        </label>
+
+                        <label>
+                            <input 
+                                type="checkbox"
+                                name="hobi"
+                                value="Musik">
+                             Musik
+                        </label>
+
+                        <label>
+                            <input 
+                                type="checkbox"
+                                name="hobi"
+                                value="Nonton">
+                             Nonton
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SELECT OPTION -->
+                <div class="form-group">
+
+                    <label> Pilih Jurusan</label>
+
+                    <select name="jurusan">
+
+                        <option value="">
+                            -- Pilih Jurusan --
+                        </option>
+
+                        <option value="Ilmu Perpustakaan">
+                             Ilmu Perpustakaan
+                        </option>
+
+                        <option value="Teknik Informatika">
+                             Teknik Informatika
+                        </option>
+
+                        <option value="Sistem Informasi">
+                             Sistem Informasi
+                        </option>
+
+                        <option value="Manajemen">
+                             Manajemen
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- SUBMIT -->
+                <button type="submit">
+                    Daftar Sekarang 
+                </button>
+
+            </form>
+
+            <p class="footer">
+                Semoga harimu menyenangkan! 
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
